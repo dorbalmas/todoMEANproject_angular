@@ -1,0 +1,87 @@
+<div class="row justify-content-center align-items-center fixed-top px-2">
+  <nav class="navbar navbar-dark bg-dark form-control h-25">
+    <div class="input-group col-lg-3">
+      <input
+        #input
+        (keyup.enter)="searchValue(input.value)"
+        class="form-control border-right-0 border"
+        type="search"
+        placeholder="search..."
+      />
+      <span class="input-group-append">
+        <button
+          (click)="searchValue(input.value)"
+          class="btn btn-outline-secondary border-left-0 border"
+          type="button"
+        >
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+
+    <div
+      class="text-white changeMe col-3 text-center"
+      (click)="searchValue('')"
+    >
+      <b>HOME</b>
+    </div>
+    <!--הוספתי קצת מוזיקה לנאב בר  -->
+    <div
+      class="col-3 d-flex justify-content-center align-items-center text-info"
+    >
+      press me
+      <i class="fa fa-arrow-right px-1" aria-hidden="true"></i>
+      <div
+        style="position: relative; width: 50px; height: 34px; overflow: hidden;"
+        class="rounded getBig"
+      >
+        <div style="position: absolute; top: -263px; left: -10px;">
+          <iframe
+            width="300"
+            height="300"
+            src="https://www.youtube.com/embed/y2OsiWkaIac?playlist=EtGDFr_9z3k&rel=0"
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <select
+      class="form-control col-lg-3"
+      #selectList
+      (change)="sortListByType(selectList.value)"
+    >
+      <option selected hidden>
+        sort by:
+      </option>
+      <option value="name">name</option>
+      <option value="category">category</option>
+      <option value="date">date</option>
+    </select>
+  </nav>
+  <form class="col-lg-12" #form="ngForm" (ngSubmit)="addObject(form.value)">
+    <div class="row">
+      <input
+        class="col-lg-4 form-control"
+        type="text"
+        placeholder="task.."
+        name="name"
+        ngModel
+      />
+      <select name="category" ngModel class="col-lg-4 form-control">
+        <option value="" selected hidden>
+          task category:
+        </option>
+        <option value="homework">homework</option>
+        <option value="meals">meals</option>
+        <option value="workout">workout</option>
+        <option value="classes">classes</option>
+        <option value="meeting">meeting</option>
+        <option value="calls">calls</option>
+        <option value="random">random...</option>
+      </select>
+      <button class="col-lg-4 btn btn-success form-control">
+        +
+      </button>
+    </div>
+  </form>
+</div>

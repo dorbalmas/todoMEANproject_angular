@@ -1,0 +1,17 @@
+h5 {
+  background-image: url("https://images.pexels.com/photos/110473/pexels-photo-110473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  width: 100%;
+  min-height: 130px;
+  background-position: center -500px;
+  background-repeat: no-repeat;
+  color: gray;
+  text-shadow: #474747 3px 5px 2px;
+}
+
+a {
+  text-decoration: none;
+}
+a :hover {
+  color: orange;
+  text-decoration: none;
+}
