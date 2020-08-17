@@ -1,0 +1,10 @@
+.changeMe b:hover {
+  color: orange;
+}
+.getBig {
+  transition: 0.7s;
+}
+
+.getBig:hover {
+  transform: scale(1.1, 1.1);
+}
