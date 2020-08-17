@@ -1,6 +1,7 @@
-.changeMe b:hover {
-  color: orange;
+.changeMe {
+  cursor: pointer;
 }
+
 .getBig {
   transition: 0.7s;
 }
